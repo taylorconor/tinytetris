@@ -109,13 +109,13 @@ int do_tick() {
 void runloop() {
   while (do_tick()) {
     usleep(10000);
-    if ((c = getch()) == 'a' && x > 0 && !check_hit(x - 1, y, r)) {
+    if ((c = getch()) == 'h' && x > 0 && !check_hit(x - 1, y, r)) {
       x--;
     }
-    if (c == 'd' && x + NUM(r, 16) < 9 && !check_hit(x + 1, y, r)) {
+    if (c == 'l' && x + NUM(r, 16) < 9 && !check_hit(x + 1, y, r)) {
       x++;
     }
-    if (c == 's') {
+    if (c == 'j') {
       while (!check_hit(x, y + 1, r)) {
         y++;
         update_piece();
@@ -123,7 +123,7 @@ void runloop() {
       remove_line();
       new_piece();
     }
-    if (c == 'w') {
+    if (c == 'k') {
       ++r %= 4;
       while (x + NUM(r, 16) > 9) {
         x--;
