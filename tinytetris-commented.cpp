@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// block layout is: {x0,y0}{x1,y1}{x2,y2}{x3,y3}{w,h} (two bits each)
+// block layout is: {w-1,h-1}{x0,y0}{x1,y1}{x2,y2}{x3,y3} (two bits each)
 int x = 431424, y = 598356, r = 427089, px = 247872, py = 799248, pr,
     c = 348480, p = 615696, tick, board[20][10],
     block[7][4] = {{x, y, x, y},
