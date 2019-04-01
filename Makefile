@@ -1,4 +1,6 @@
-all: tt
+LDFLAGS=-lcurses
 
-tt: tinytetris-commented.cpp
-	g++ tinytetris-commented.cpp -lncurses -o tt
+all: tinytetris
+
+clean:
+	rm -f tinytetris tinytetris-commented
