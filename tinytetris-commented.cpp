@@ -158,4 +158,5 @@ int main() {
   box(stdscr, 0, 0);
   runloop();
   endwin();
+  return score;
 }
