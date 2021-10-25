@@ -1,6 +1,7 @@
-LDFLAGS=-lcurses
+CXXFLAGS=-std=c++11
+LDLIBS=-lcurses
 
-all: tinytetris
+all: tinytetris tinytetris-commented
 
 clean:
 	rm -f tinytetris tinytetris-commented
