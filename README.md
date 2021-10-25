@@ -11,3 +11,6 @@ This is the 80x23 version. You control it with `a` (left), `d` (right), `w` (rot
 ### tinytetris-commented.cpp
 This one is almost identical to `tinytetris.cpp`, but not minified, and with some
 comments to make it easier to read (but it's still tricky to read in certain parts).
+
+### build binary tinytetris-commented.cpp
+`g++ -o tinytetris-commented tinytetris-commented.cpp -lncurses`
