@@ -15,9 +15,10 @@ z&&attron(262176|z<<8);printw("  ");attroff(262176|z<<8);}}move(21,1);printw("S"
 ][0],40);memset(&a[0][0],0,10);s++;}}I C(I x,I y,I r){if(y+N(r,18)>19)return 1;S
 (f,g,h,0);c=0;for(I i=0;i<8;i+=2)a[y+N(r,i*2)][x+N(r,(i*2)+2)]&&c++;S(f,g,h,p+1)
 ;return c;}I T(){if(++t>30){t=0;if(C(x,y+1,r)){if(!y)return 0;R();P();}else y++;
-U();}return 1;}I L(){while(T()){usleep(10000);if((c=getch())==97&&x>0&&!C(x-1,y,
-r))x--;if(c==100&&x+N(r,16)<9&&!C(x+1,y,r))x++;if(c==115){while(!C(x,y+1,r)){y++
-;U();}R();P();}if(c==119){++r%=4;while(x+N(r,16)>9)x--;if(C(x,y,r)){x=f;r=h;}}if
-(c==113)return 0;U();F();}}I main(){srand(time(0));initscr();start_color();for(c
-=1;c<8;c++){init_pair(c,c,0);}P();resizeterm(22,22);noecho();timeout(0);curs_set
-(0);box(stdscr,0,0);L();endwin();} // Conor Taylor
+U();}return 1;}I L(){I u,d,l,ri;while(T()){usleep(10000);if((c=getch())=='\033')
+{getch();c=getch();u='A';d='B';ri='C';l='D';}else{u='w';d='s';ri='d';l='a';}if(c
+==l&&x>0&&!C(x-1,y,r))x--;if(c==ri&&x+N(r,16)<9&&!C(x+1,y,r))x++;if(c==d){while(
+!C(x,y+1,r)){y++;U();}R();P();}if(c==u){++r%=4;while(x+N(r,16)>9)x--;if(C(x,y,r)
+){x=f;r=h;}}if(c=='q')return 0;U();F();}}I main(){srand(time(0));initscr();//ups
+start_color();for(c=1;c<8;c++){init_pair(c,c,0);}P();resizeterm(22,22);noecho();
+timeout(0);curs_set(0);box(stdscr,0,0);L();endwin();} // Conor Taylor

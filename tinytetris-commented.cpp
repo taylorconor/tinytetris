@@ -107,15 +107,29 @@ int do_tick() {
 
 // main game loop with wasd input checking
 void runloop() {
+  int up, down, left, right;
   while (do_tick()) {
     usleep(10000);
-    if ((c = getch()) == 'a' && x > 0 && !check_hit(x - 1, y, r)) {
+    if ((c = getch()) == '\033') {
+      getch();
+      c = getch();
+      up = 'A';
+      down = 'B';
+      right = 'C';
+      left = 'D';
+    } else {
+      up = 'w';
+      down = 's';
+      right = 'd';
+      left = 'a';
+    }
+    if (c == left && x > 0 && !check_hit(x - 1, y, r)) {
       x--;
     }
-    if (c == 'd' && x + NUM(r, 16) < 9 && !check_hit(x + 1, y, r)) {
+    if (c == right && x + NUM(r, 16) < 9 && !check_hit(x + 1, y, r)) {
       x++;
     }
-    if (c == 's') {
+    if (c == down) {
       while (!check_hit(x, y + 1, r)) {
         y++;
         update_piece();
@@ -123,7 +137,7 @@ void runloop() {
       remove_line();
       new_piece();
     }
-    if (c == 'w') {
+    if (c == up) {
       ++r %= 4;
       while (x + NUM(r, 16) > 9) {
         x--;
