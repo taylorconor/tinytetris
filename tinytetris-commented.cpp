@@ -50,7 +50,7 @@ void set_piece(int x, int y, int r, int v) {
 }
 
 // move a piece from old (p*) coords to new
-int update_piece() {
+void update_piece() {
   set_piece(px, py, pr, 0);
   set_piece(px = x, py = y, pr = r, p + 1);
 }
