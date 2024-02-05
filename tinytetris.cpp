@@ -21,3 +21,4 @@ r))x--;if(c==100&&x+N(r,16)<9&&!C(x+1,y,r))x++;if(c==115){while(!C(x,y+1,r)){y++
 (c==113)return 0;U();F();}}I main(){srand(time(0));initscr();start_color();for(c
 =1;c<8;c++){init_pair(c,c,0);}P();resizeterm(22,22);noecho();timeout(0);curs_set
 (0);box(stdscr,0,0);L();endwin();} // Conor Taylor
+//New comment
