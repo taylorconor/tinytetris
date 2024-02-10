@@ -1,5 +1,6 @@
 LDFLAGS=-lcurses
-
+//eifnweiufnesiufesnijesnesuigrgownrgogw
+//fnuiewnfweoufnwfouwfwne
 all: tinytetris
 
 clean:
