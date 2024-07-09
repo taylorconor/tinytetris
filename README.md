@@ -1,3 +1,6 @@
+**!!!!IMPORTANT!!!!!!**
+This requires you to use NCURSESW!!!!!! (SW Just has extra bits normal Ncurses doesn't.
+
 # tinytetris
 80x23 terminal tetris!
 
@@ -13,4 +16,6 @@ This one is almost identical to `tinytetris.cpp`, but not minified, and with som
 comments to make it easier to read (but it's still tricky to read in certain parts).
 
 ### build binary tinytetris-commented.cpp
-`g++ -o tinytetris-commented tinytetris-commented.cpp -lncurses`
+`g++ tinytetris.cpp -lncursesw
+  or
+  g++ tinytetris-commented.cpp -lncursesw
