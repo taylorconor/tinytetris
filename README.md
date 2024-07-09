@@ -1,5 +1,5 @@
 **!!!!IMPORTANT!!!!!!**
-This requires you to use NCURSESW!!!!!! (SW Just has extra bits normal Ncurses doesn't.
+This requires you to use NCURSESW!!!!!!
 
 # tinytetris
 80x23 terminal tetris!
