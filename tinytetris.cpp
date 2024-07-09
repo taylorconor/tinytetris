@@ -1,5 +1,5 @@
 #include <ctime>    //   ████████  ██████  ████████  ████████  ██  ██████  ██
-#include <curses.h> //      ██     ██         ██     ██    ██  ██  ██      ██
+#include <ncursesw/curses.h> //      ██     ██         ██     ██    ██  ██  ██      ██
 #include <stdlib.h> //      ██     ████       ██     ████████  ██  ██████  ██
 #include <string.h> //      ██     ██         ██     ██  ██    ██      ██
 #include <unistd.h> //      ██     ██████     ██     ██    ██  ██  ██████  ██
