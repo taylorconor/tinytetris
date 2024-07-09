@@ -1,4 +1,4 @@
-LDFLAGS=-lcurses
+LDFLAGS=-lncursesw
 
 all: tinytetris
 
