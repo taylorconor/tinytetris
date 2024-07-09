@@ -16,6 +16,4 @@ This one is almost identical to `tinytetris.cpp`, but not minified, and with som
 comments to make it easier to read (but it's still tricky to read in certain parts).
 
 ### build binary tinytetris-commented.cpp
-`g++ tinytetris.cpp -lncursesw
-  or
-  g++ tinytetris-commented.cpp -lncursesw
+`g++ tinytetris.cpp -lncursesw or g++ tinytetris-commented.cpp -lncursesw
