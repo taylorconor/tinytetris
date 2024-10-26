@@ -57,20 +57,23 @@ int update_piece() {
 
 // remove line(s) from the board if they're full
 void remove_line() {
-  for (int row = y; row <= y + NUM(r, 18); row++) {
-    c = 1;
-    for (int i = 0; i < 10; i++) {
-      c *= board[row][i];
+    for (int row = 0; row < 20; row++) {
+        bool full = true;
+        for (int i = 0; i < 10; i++) {
+            if (board[row][i] == 0) {
+                full = false;
+                break;
+            }
+        }
+        if (full) {
+            for (int i = row; i > 0; i--) {
+                memcpy(board[i], board[i - 1], sizeof(board[0]));
+            }
+            memset(board[0], 0, sizeof(board[0]));
+            score++;
+            row--; // Stay on the current row to check it again
+        }
     }
-    if (!c) {
-      continue;
-    }
-    for (int i = row - 1; i > 0; i--) {
-      memcpy(&board[i + 1][0], &board[i][0], 40);
-    }
-    memset(&board[0][0], 0, 10);
-    score++;
-  }
 }
 
 // check if placing p at (x,y,r) will be a collision
